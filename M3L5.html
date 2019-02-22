@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>enter a number and click oke </p>
+    <input id="id1" type="number" min="100">
+    <button type="button" onclick="myFunction()">oke</button>
+    <p>if the number is less tan 100 (the input mins atribut), an error message wil be displayed</p>
+    <p id="demo"></p>
+
+    <script>
+    function myFunction(){
+        var txt = "";
+        if(document.getElementById("id1").validity.rangeUnderFlow){
+            txt = "Value too small";
+        }else{
+            txt = "input oke"
+        }
+        document.getElementById("demo").innerHTML = txt ;
+    }
+    </script>
+</body>
+</html>
